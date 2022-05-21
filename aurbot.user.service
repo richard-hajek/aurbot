@@ -2,7 +2,8 @@
 Description=AUR Builder Bot
 
 [Service]
-ExecStart=/home/meowxiik/Cloud/Software/aurbot/aurbot -c /home/meowxiik/Cloud/Software/aurbot/aurbot.conf
+ExecStart=/usr/bin/aurbot
+ExecReload=/usr/bin/kill -HUP $MAINPID
 Nice=10
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
