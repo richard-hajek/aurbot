@@ -2,15 +2,17 @@
 Description=AUR Builder Bot
 
 [Service]
-Environment=TMP=/media/Cloud/tmp
-Environment=TEMP=/media/Cloud/tmp
-Environment=TMPDIR=/media/Cloud/tmp
+Environment=TMP=/mnt/Cloud/tmp
+Environment=TEMP=/mnt/Cloud/tmp
+Environment=TMPDIR=/mnt/Cloud/tmp
 User=meowxiik
 ExecStart=/opt/aurbot/aurbot/aurbot -c /opt/aurbot/aurbot/aurbot.conf
 Nice=10
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
 CPUSchedulingPolicy=batch
+Restart=always
+RestartAfter=5s
 
 [Install]
 WantedBy=multi-user.target
