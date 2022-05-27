@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo '[DEFAULT]
-build_cmd = makepkg -s --noconfirm --skippgpcheck
-commit_cmd = bash -c 'mv *.pkg.* ~/Cloud/AURPackages'
+destination = /home/meowxiik/Cloud/AURPackages
+var_dir = /home/meowxiik/aurbot
 '
 
 for p in `pacman -Qqm`; do
