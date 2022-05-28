@@ -12,7 +12,7 @@ IOSchedulingClass=best-effort
 IOSchedulingPriority=7
 CPUSchedulingPolicy=batch
 Restart=always
-RestartAfter=5s
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
